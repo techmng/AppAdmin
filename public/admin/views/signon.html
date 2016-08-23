@@ -1,0 +1,23 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading"><b>Already registered? Sign-in here.</b>&nbsp;&nbsp;&nbsp;<span style="color:red;align:right">{{globalError}}</span></div>
+  <div class="panel-body">
+    <form name="loginForm" role="form" class="form-inline" ng-submit="signon()">
+      <div class="form-group">
+          <input type="email" class="form-control" name="email" ng-model="email" placeholder="Email" required>
+          <span style="color:red" ng-show="loginForm.email.$dirty && loginForm.email.$invalid">
+          <span ng-show="loginForm.email.$error.required">Emaill Id is required.</span>
+      </div>
+      <div class="form-group">
+          &nbsp; &nbsp;<input type="password" class="form-control" name="pwd" ng-model="pwd" placeholder="Password" required> 
+          <span style="color:red" ng-show="loginForm.pwd.$dirty && loginForm.pwd.$invalid">
+          <span ng-show="loginForm.pwd.$error.required">Password is required.</span>  
+      </div>
+        &nbsp; &nbsp;<button type="submit" class="btn btn-default" ng-disabled="(loginForm.email.$dirty && loginForm.email.$invalid) || (loginForm.pwd.$dirty && loginForm.pwd.$invalid)" >Submit</button>
+        <br/><br/>
+        <a href="">Forgot Password ?</a>
+        <br/>
+        <a ng-href="#/register">Not registered? Sign up here..... </a>
+  </form>
+  </div>
+</div>

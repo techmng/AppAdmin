@@ -1,0 +1,51 @@
+<html ng-app="mainModule">
+<head>
+  <title>App Manager</title>
+  <meta charset="utf-8">
+  <script src="admin/scripts/lib/angular.min.js"></script>
+  <script src="admin/scripts/lib/angular-route.min.js"></script>
+  <script src="admin/scripts/lib/angular-cookies.min.js"></script>
+  <script src="admin/scripts/angApp.js"></script>
+  <link href="admin/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="admin/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body ng-controller="signonController" background="images/geometry.png">
+
+<div>	
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <a class="navbar-brand" href="#/">App Manager</a>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Project</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li ng-show="!authFlag"><a href="#signon"><span class="glyphicon glyphicon-log-in"></span> Login/Register</a></li>-->
+         <li ng-show="authFlag"><a href="#profile"><span class="glyphicon glyphicon-user"></span></span> Welcome {{currentUser}}</a></li>
+         <li ng-show="authFlag"><a href="#signout"><span class="glyphicon glyphicon-log-out"></span> Signout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div> 
+
+<div ng-view></div>
+
+<!-- Footer
+		<nav class="navbar navbar-inverse">
+          <a class="navbar-brand" href="#">Footer</a>
+		</nav>
+Footer End -->
+</body>
+</html>

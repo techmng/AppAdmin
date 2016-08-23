@@ -1,0 +1,29 @@
+
+
+<div class="panel panel-default"  ng-controller="registerController">
+  <div class="panel-heading"><b>Register here and start posting your thoughts in two easy steps</b></div>
+  <div class="panel-body">
+  
+  
+  <form role="form" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-8">
+          <input type="email" class="form-control" id="email" ng-model="email" placeholder="Enter email" required="">
+        </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-8">
+        <input type="password" class="form-control" id="pwd" ng-model="pwd" placeholder="Enter password" required="">
+      </div>    
+    </div>
+    
+    <div class="form-group">
+      <div class="col-sm-8">
+        <input type="password" class="form-control" id="pwdConfirm" ng-model="pwdConfirm" placeholder="Confirm password" required="">
+      </div>    
+    </div>
+        <button type="submit" class="btn btn-default" ng-click="register();" >Continue..</button>
+  </form>
+  
+  </div>
+</div>
